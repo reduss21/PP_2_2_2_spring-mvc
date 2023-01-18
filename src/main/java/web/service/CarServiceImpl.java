@@ -1,4 +1,4 @@
-package web.Service;
+package web.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +11,9 @@ import java.util.List;
 @Service
 public class CarServiceImpl implements CarService {
     @Autowired
-    private CarDao car;
+    private CarDao carDao;
     @Override
     public List<Car> getCarList(List<Car> carList, Integer count) {
-        return car.getCarList(carList, count);
+        return carDao.getCarList(carList, count);
     }
 }
